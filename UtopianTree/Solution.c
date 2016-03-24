@@ -7,31 +7,18 @@
 #include <stdbool.h>
 
 int main(){
-    int t, a0, n, h=1, a1=0; 
+    int t, a0=0, n; 
     scanf("%d",&t);
-    for(int a0 = 0; a0 < t; a0++){
-        h=1;
+    for(; a0 < t; a0++){
         scanf("%d",&n);
-        if (n==1){
-            printf("%d\n",++h);
-        }
-        else if (n%2==0) {
-            for (; a1<n/2; a1++){
-                h*=2; 
-                h++;
-            }
-            printf("%d\n",h);
-        } 
-        else if (n%2==1){
-            for (; a1<n/2; a1++){
+        int h=1;
+        for(int a1=1; a1<=n; a1++){
+            if(a1%2!=0)
                 h*=2;
-                h++;
-            }
-            h*=2;
-            printf("%d\n",h);
+            else
+                ++h;       
         }
-        else 
-            printf("%d\n",h);
+        printf("%d\n",h);
     }
     return 0;
 }

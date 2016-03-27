@@ -2,12 +2,13 @@ import java.io.*;
 import java.util.*;
 
 public class Solution {
-
+    //repeat method taken from StackOverflow
+    public static String repeat(String str, int times) {
+        return new String(new char[times]).replace("\0", str);
+    }
     public static void main(String[] args) {
-        
         int f,r;
-        String d="";
-        
+        String d="",temp="";
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();
         
@@ -24,10 +25,10 @@ public class Solution {
                     f-=1;
                     while((r+=3)%5!=0) f-=1;
                 }
-                for(int a1=0; a1<f; a1++) d+="555";
-                for(int a2=0; a2<(r/5); a2++)  d+="33333";
+                d=repeat("555",f);
+                temp=repeat("33333",r/5);
              }   
-             System.out.println(d);
+             System.out.println(d+temp);
         } 
     }
 }

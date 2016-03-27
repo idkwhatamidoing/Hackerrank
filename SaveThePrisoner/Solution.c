@@ -1,24 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    int T, N, M, S, a;
+    int T;
+    long long int N, M, S, a;
 
     scanf("%d",&T);
-    
+
     while(T!=0){
-        scanf("%d %d %d",&N, &M, &S);
-        
-        a=S;
-        
-        for(int i=1; i<M; i++){
-            a++;
-            if (i==N)
-                a=0;
+        scanf("%lld %lld %lld",&N, &M, &S);
+
+        if(M>=N){
+            if(M%N==0) a=M/N-1;
+            else a=S+(M%N-1);
         }
-        
+
+        else a=S+(M-1);
+
+        if (a>N)
+            a-=N;
+
         T--;
-        printf("%d",a);
-    } 
-     
+        printf("%lld\n",a);
+    }
+
     return 0;
 }

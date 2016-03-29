@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     
     bool exist=false;
-    int T, N, I;
+    int T, N;
     cin>>T;
     
     while(T!=0){

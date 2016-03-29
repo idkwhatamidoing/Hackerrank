@@ -24,8 +24,8 @@ int main(){
            else if(A[i]<A[j]) A[i]+=A[++b];
            else{
                    if(N%2==0 && (c-1)-(b+1)==1){exist=false; break;}
-                   else if(N%2==0 && (c-1)-(b-1)==0){exist=true; break;}
-                   else if(N%2==1 && (c-1)-(b-1)==0){exist=true; break;}
+                   else if(N%2==0 && (c-1)-(b+1)==0){exist=true; break;}
+                   else if(N%2==1 && (c-1)-(b+1)==0){exist=true; break;}
                
                     A[i]+=A[++b];
                     A[j]+=A[--c];

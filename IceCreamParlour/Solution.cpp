@@ -19,7 +19,7 @@ int main(){
                 list[a1]=c[a0];
                 
                 for(int a2=0; a2<a1; a2++){
-                     if(list[a0]+list[a2]==M && a0!=a2) { 
+                     if(list[a0]+list[a1]==M && a0!=a2) { 
                           cout<<index[a2]<<" "<<a0+1<<endl;
                           break;
                      } 

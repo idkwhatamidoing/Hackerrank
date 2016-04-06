@@ -1,3 +1,4 @@
+//pretty much gave up on this unless I properly learn how to use BigInteger
 import java.io.*;
 import java.util.*;
 import java.math.*;
